@@ -63,7 +63,7 @@ window.SITE_CONFIG = {
     heroVideoPoster: "",
     heroVideoAlt: "Autoplay preview video (academic project)",
     videoCaption:
-      "Autoplay preview (≈20 seconds): raw video → Traffic Simulation → Blender → Unity → Results"
+      "Autoplay preview (≈20 seconds): raw video → Traffic Simulation → Results"
   },
 
   caseStudy: {
@@ -71,15 +71,15 @@ window.SITE_CONFIG = {
 
     backgroundTitle: "Background",
     backgroundBullets: [
-			"Global freight rail is growing and remains strategically important.",
-			"Rail carries about 18% of EU inland freight, 36% in the U.S., and 27% in India.",
-			"Road dominates many freight systems, so rail often receives less attention.",
-			"In Canada, rail accounted for 10.5% of international merchandise trade value in 2024."
+			"Vehicles flowrate is rapidly increasing.",
+			"Introduction of FSD brings safety questions.",
+			"The vehicles dominates research and infrastructure receives little attention.",
+			"Desperate need to predict interactions of two vehicle types in todays infrastrucutre"
     ],
 
     problemTitle: "Problem Statement",
     problemBullets: [
-			"Railway operations are hard to assess.",
+			"Highway travel are hard to assess.",
 			"3D asset creation is time-consuming.",
 			"2D models lack immersion.",
 			"Results are difficult to communicate."
@@ -87,9 +87,9 @@ window.SITE_CONFIG = {
 
     objectivesTitle: "Project Objectives",
     objectivesBullets: [
-			"Simulate train scheduling, signaling, and capacity in SUMO.",
-			"Create 3D digital assets using generative AI and blender.",
-			"Create 3D rail environment and VR video in Unity.",
+			"Simulate vehicle speed, signaling, and capacity in SUMO.",
+			"Create vehicle models for each type.",
+			"Create a realistic roadway network in SUMO.",
 			"Present results in different styles through KPIs, figures, and a showcase website."
     ]
   },
@@ -98,18 +98,18 @@ window.SITE_CONFIG = {
     title: "Methodology",
     steps: [
       {
-        title: "Step 1: Train Scheduling and Signaling (SUMO Simulation)",
-				text: "Build the rail network and test routing, signaling, and timetables.",
+        title: "Step 1: Vehicle Movement and Signaling (SUMO Simulation)",
+				text: "Build the road network.",
         image: "assets/img/image2.jpg"
       },
       {
-				title: "Step 2: Digital Twin Assets Developement (Blender)",
-				text: "Create a 3D railway assets using generative AI and blender.",
+				title: "Step 2: Vehicle Model Developement (SUMO)",
+				text: "Create a vehicle model for HDV and CAV.",
         image: "assets/img/image3.jpg"
       },
       {
-				title: "Step 3: Immersive VR Visualization (Unity)",
-				text: "Create a 3D railway scene and produce a VR 360-degree video.",
+				title: "Step 3: Infrastructure Intervention (SUMO)",
+				text: "Add an extra turn lane on northbound traffic",
         image: "assets/img/image4.jpg"
       },
       {
@@ -124,29 +124,28 @@ window.SITE_CONFIG = {
     title: "Methodology Steps (Demo Modules)",
     modules: [
       {
-        title: "Module 1: Train Scheduling & Signaling (SUMO)",
+        title: "Module 1:Roadway network development (SUMO)",
         bullets: [
-				  { text: "Build a simulated rail network in SUMO with train routing and maximum operating speed." },
-          { text: "Design fixed-block rail signals and define station stops along the corridor." },
-          { text: "Configure timetable, scheduled departures, running time, dwell time, and headway." }
+				  { text: "Build a simulated road network in SUMO with accurate road network design" },
+          { text: "Design fixed turn signals and stops along the road." },
         ],
         image: "assets/img/image2.jpg"
       },
       {
-        title: "Module 2: Digital Twin Assets Developement (Blender)",
+        title: "Module 2: Vehicle Model Developement (SUMO)",
         bullets: [
-          { text: "Generative AI: use Meshy.ai tool to develop different assets." },
-          { text: "From generative AI to belnder." },
-          { text: "Preprocessing assets in Blender ." }
+          { text: "Create HDV and CAV models." },
+          { text: "Implement individual simulations with both models" },
+          { text: "Compare the results of the two simulations ." }
         ],
         image: "assets/img/image3.jpg"
       },
       {
-        title: "Module 3: Immersive VR Visualization (Unity)",
+        title: "Module 3: Infratstructure interventions",
         bullets: [
-				  { text: "Develop a 3D railway environment including stations, buildings, trees, and rolling stock." },
-          { text: "Configure visualization fundamentals: lighting, camera position, time of day, and scene composition." },
-          { text: "Produce a VR 360-degree video output for immersive presentation and portfolio use." }
+				  { text: "Added an extra lane for northbound traffic" },
+          { text: "Ran the HDV simulation with updated road network" },
+          { text: "Compare speed and flow density with intervention to measure infrastructure change." }
         ],
         image: "assets/img/image4.jpg"
       },
@@ -165,28 +164,27 @@ window.SITE_CONFIG = {
 	results: {
 			title: "Results & Potential Improvements",
 			subtitle:
-				"Train schedule simulation outputs across two scenarios showing arrivals, departures, and dwell time across four stations. Results are for educational purposes only.",
+				"Vehicle simulation outputs across two scenarios showing speed, flow rate and traffic density. Results are for educational purposes only.",
 
 			charts: {
 				left: {
-					title: "Scenario 1 — Train Schedule: Arrivals, Departures & Dwell Time",
+					title: "Scenario 1 — Human Driven Vehicles",
 					src: "assets/img/image6.jpg",
-					alt: "Scenario 1 train schedule chart showing arrivals and departures across S1 to S4"
+					alt: "Scenario 1 Human driven vehicle flowrate"
 				},
 				right: {
-					title: "Scenario 2 — Train Schedule: Arrivals, Departures & Dwell Time",
+					title: "Scenario 2 — Computer Driven Vehicles",
 					src: "assets/img/image7.jpg",
-					alt: "Scenario 2 train schedule chart showing arrivals and departures across S1 to S4"
+					alt: "Scenario 2 Computer Driven Vehicle flowrate"
 				}
 			},
 
 			discussionTitle: "Discussion",
 			discussionBullets: [
-				"Scenario 1 provides a stable baseline timetable with consistent station dwell and smooth train progression.",
-				"Scenario 2 applies a delay at S2, which then propagates to downstream stations.",
-				"Delay effects grow across frequency levels, with major increases in arrival and departure times at S3 and S4.",
-				"S1 is only slightly affected, while downstream stations absorb most of the disruption.",
-				"This demonstrates the importance of recovery time, dwell management, and operational control in rail scheduling."
+				"Scenario 1 provides a baseline to demonstrate how traffic is currently affecting the city",
+				"Scenario 2 applies a computer driven vehicle model to show how FSD vehicles would behave in the city",
+				"Self driven vehicles perform marginally better than Human driven vehicles",
+				"Intervention makes little difference to traffic density"
 			]
 		},
 
@@ -196,7 +194,9 @@ window.SITE_CONFIG = {
       "This section clarifies academic context, roles, tools, and sources. Clear attribution improves credibility and shows ethical data handling.",
 
     members: [
-      { name: "Your Name", role: "Rail Scheduling & Signaling + Digital Twin I, Immersive VR Visualization + Results & Communication" }
+      { name: "Mahir Nasar", role: "Roadway network development and analysis" },
+		{ name: "Aaron Upadhayay", role: "Roadway network development and analysis" },
+		 { name: "Larry Tcherner", role: "Roadway network development and analysis" }
     ],
 
     acknowledgments: [
@@ -207,6 +207,6 @@ window.SITE_CONFIG = {
     ],
 
     repoLabel: "Project Repository",
-    repoUrl: "https://github.com/USERNAME/REPO"
+    repoUrl: "https://github.com/MahirNasar/MahirNasar.github.io"
   }
 };
